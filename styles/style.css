@@ -322,7 +322,7 @@
     aspect-ratio: 1 / 1;
   }
 
-  .images__item-street{
+  .images__item-street {
     grid-area: street;
     aspect-ratio: 479 / 318;
   }
@@ -367,7 +367,7 @@
     aspect-ratio: 315 / 768;
   }
 
-  .images__item-street{
+  .images__item-street {
     aspect-ratio: 649 / 433;
   }
 }

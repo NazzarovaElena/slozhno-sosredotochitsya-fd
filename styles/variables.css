@@ -10,10 +10,12 @@
   --title-color: #ffc2e6;
   --text-color: #353430;
   --text-color-decor: var(--text-color);
-  --decorated-zone-color: var(--text-color); 
+  --decorated-zone-color: var(--text-color);
   --text-color-section-title: var(--text-color);
   --button-color: var(--text-color);
-  /* в задании сказано "При наведении добавляется граница по всем сторонам кнопки, цвет границы такой же, как у текста".
-  А в макете цвет задан другой. Выполнено согласно макету */
-  --button-hover-color: #32312d66; 
+  /*
+  в задании сказано "При наведении добавляется граница по всем сторонам кнопки, цвет границы такой же, как у текста".
+  А в макете цвет задан другой. Выполнено согласно макету
+  */
+  --button-hover-color: #32312d66;
 }
