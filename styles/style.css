@@ -240,6 +240,11 @@
     margin-block-start: 120px;
   }
 
+  .header__rec {
+    right: 29px;
+    top: 20px;
+  }
+
   .decorated-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -291,7 +296,7 @@
 
   .images {
     gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-areas:
     "sunset sunset ice-cream"
     "tape books ice-cream"
