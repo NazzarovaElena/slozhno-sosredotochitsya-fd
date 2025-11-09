@@ -19,8 +19,8 @@
   display: grid;
   block-size: 100vh;
   min-block-size: 668px;
-  grid-template-rows: 1fr 1fr min-content;
-  padding: 0px 10px 15px;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: 10px;
 }
 
 .decorated-zone {
@@ -124,7 +124,7 @@
 
 .header__content {
   font-weight: bold;
-  margin-block-end: 50px;
+  align-self: center;
 }
 
 
@@ -205,6 +205,7 @@
   object-fit: cover;
 }
 
+
 /*  стили для блока footer*/
 
 
@@ -222,7 +223,7 @@
 }
 
 
-/* адаптив для расширении больше 768px */
+/* адаптив для разрешений больше 768px */
 
 
 @media (min-width: 768px) {
@@ -230,14 +231,13 @@
     gap: 60px;
   }
 
-  .header, 
+  .header {
+    padding: 20px;
+  }
+
   .section,
   .footer {
     padding: 0 20px 0;
-  }
-
-  .header__theme-menu-list {
-    margin-block-start: 120px;
   }
 
   .header__rec {
@@ -250,14 +250,12 @@
   }
   
   .header .decorated-title {
-    margin-block-start: 100px;
     margin-inline-start: -20px;
   }
 
   .header__content {
     inline-size: 50%;
     justify-self: end;
-    margin-block-end: clamp(11.4375rem, 20.625rem + -19.1406vw, 8.375rem);
   }
 
   .decorated-zone::before {
@@ -297,6 +295,7 @@
   .images {
     gap: 20px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, min-content);
     grid-template-areas:
     "sunset sunset ice-cream"
     "tape books ice-cream"
@@ -330,24 +329,19 @@
 }
 
 
-/* адаптив для расширении больше 1024px */
+/* адаптив для разрешений больше 1024px */
 
 
 @media (min-width: 1024px) {
   .header__theme-menu {
     align-self: start;
     justify-self: center;
-    margin-block-start: 20px;
   }
 
   .header__theme-menu-list {
     display: flex;
     flex-direction: row;
     margin-block-start: 0;
-  }
-
-  .header__content {
-    margin-block-start: 50px;
   }
 
   .section__why,
@@ -357,5 +351,23 @@
 
   .section__what .cards {
     grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
+  }
+
+  /* в макете для разных разрешений разное соотношение сторон изображений */
+
+  .images__item-sunset {
+    aspect-ratio: 650 / 260;
+  }
+
+  .images__item-ice-cream {
+    aspect-ratio: 314 / 595;
+  }
+
+  .images__item-tape {
+    aspect-ratio: 315 / 768;
+  }
+
+  .images__item-street{
+    aspect-ratio: 649 / 433;
   }
 }
