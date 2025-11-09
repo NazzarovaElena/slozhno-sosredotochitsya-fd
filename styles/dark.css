@@ -4,9 +4,55 @@
   переключая тему
 */
 
+/* Если пользователь выбрал тёмную тему в меню заголовка*/
+
 :root.theme-dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-image: url('../images/cover-image-dark.png');
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --text-color: #f1b2ce;
+  --text-color-decor: var(--bg-color);
+  --decorated-zone-color: var(--accent-color);
+  --text-color-section-title: var(--accent-color);
+  --button-color: var(--accent-color);
+  --button-hover-color: #ff007066;
 }
+
+:root.theme-dark .header__rec {
+  display: block;
+}
+
+:root.theme-dark .header__rec::after {
+  display: inline-block;
+}
+
+/* Если пользователь уставновил предпочитаемую тёмную тему в системных настройках и выбрал тему авто в меню заголовка*/
+
+@media (prefers-color-scheme: dark) {
+  :root.theme-auto {
+    --bg-image: url('../images/cover-image-dark.png');
+    --bg-color: #000028;
+    --accent-color: #ff0070;
+    --title-color: #db00ff;
+    --text-color: #f1b2ce;
+    --text-color-decor: var(--bg-color);
+    --decorated-zone-color: var(--accent-color);
+    --text-color-section-title: var(--accent-color);
+    --button-color: var(--accent-color);
+    --button-hover-color: #ff007066;
+  }
+
+  :root.theme-auto .header__rec {
+    display: block;
+  }
+
+  :root.theme-auto .header__rec::after {
+    display: inline-block;
+  }
+}
+

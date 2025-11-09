@@ -25,6 +25,9 @@ p {
 ul {
   margin: 0;
   padding: 0;
+      /* padding-inline-start: 0;
+      margin-block-start: 0;
+      margin-block-end: 0; */
   list-style: none;
 }
 
@@ -39,4 +42,8 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+button:disabled {
+  pointer-events: none;
 }
