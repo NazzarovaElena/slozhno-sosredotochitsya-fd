@@ -276,16 +276,12 @@
     margin-block-start: 0;
   }
 
-  .section__why {
+  .section__column {
     grid-template-columns: 1fr 2fr;
   }
 
   .section__what .section__title {
     width: calc(1/3 * 100% - 10px);
-  }
-
-  .section__how {
-    grid-template-columns: 1fr 2fr;
   }
 
   .section__images {
@@ -344,8 +340,7 @@
     margin-block-start: 0;
   }
 
-  .section__why,
-  .section__how {
+  .section__column {
     gap: 10px;
   }
 
