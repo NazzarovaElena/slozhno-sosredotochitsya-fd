@@ -134,11 +134,11 @@
 .main {
   display: grid;
   gap: 50px;
+  padding: 0 10px;
 }
 
 .section {
   display: grid;
-  padding: 0 10px;
   gap: 20px;
 }
 
@@ -149,16 +149,10 @@
   font-weight: bold;
 }
 
-.cards {
-  display: grid;
-  gap: 20px;
-}
-
 .cards__item-title {
   font-size: inherit;
   line-height: inherit;
   font-weight: bold;
-  margin-block-end: 10px;
 }
 
 .subcards__item-title {
@@ -166,7 +160,10 @@
   line-height: inherit;
   font-weight: normal;
   margin-block-start: 20px;
-  margin-block-end: 10px;
+}
+
+.cards__item-content {
+  margin-block-start: 10px;
 }
 
 .cards__item-content a {
@@ -235,7 +232,7 @@
     padding: 20px;
   }
 
-  .section,
+  .main,
   .footer {
     padding: 0 20px 0;
   }
@@ -272,12 +269,13 @@
     gap: 80px;
   }
 
-  .cards__item-title {
-    margin-block-start: 0;
-  }
-
   .section__column {
     grid-template-columns: 1fr 2fr;
+  }
+
+  .section__column .cards__item {
+    grid-column-start: 2;
+    grid-column-end: 3;
   }
 
   .section__what .section__title {
@@ -341,11 +339,15 @@
   }
 
   .section__column {
-    gap: 10px;
+    gap: 20px 10px;
   }
 
-  .section__what .cards {
+  .section__what {
     grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
+  }
+
+  .section__what .section__title {
+    grid-column: 1 / -1;
   }
 
   /* в макете для разных разрешений разное соотношение сторон изображений */
