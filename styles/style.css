@@ -343,7 +343,7 @@
   }
 
   .section__what {
-    grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .section__what .section__title {
